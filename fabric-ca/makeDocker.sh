@@ -15,7 +15,7 @@ source $SDIR/scripts/env.sh
 function main {
    {
    writeHeader
-   writeRootFabricCA
+   #writeRootFabricCA
    if $USE_INTERMEDIATE_CA; then
       writeIntermediateFabricCA
    fi
@@ -164,8 +164,6 @@ function writeIntermediateCA {
       - ./$DATA:/$DATA
     networks:
       - $NETWORK
-    depends_on:
-      - $ROOT_CA_NAME
 "
 }
 

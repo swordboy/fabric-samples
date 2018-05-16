@@ -38,6 +38,8 @@ if [ -d ${DDIR} ]; then
 fi
 mkdir -p ${DDIR}/logs
 
+cp -r ica-org* ${DDIR}/
+
 # Create the docker-compose file
 ${SDIR}/makeDocker.sh
 
